@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Task Management System</h1>
+    </header>
+
+    <div class="container">
+        <!-- Task Form -->
+        <div class="task-form">
+            <h2>Create a New Task</h2>
+            <form id="taskForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea><br><br>
+
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate" required><br><br>
+
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select><br><br>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Task List -->
+        <div class="priority-lists">
+            <div class="priority-list" id="high-priority">
+                <h3 style="color: red;">High Priority</h3>
+                <ul></ul>
+            </div>
+            <div class="priority-list" id="medium-priority">
+                <h3 style="color: orange;">Medium Priority</h3>
+                <ul></ul>
+            </div>
+            <div class="priority-list" id="low-priority">
+                <h3 style="color: green;">Low Priority</h3>
+                <ul></ul>
+            </div>
+        </div>
+        <div id="taskDetailsModal" style="display: none;">
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <p id="modalDueDate"></p>
+            </div>
+        </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
